@@ -3,10 +3,14 @@
     <li ng-repeat="track in tracks">
       <img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/>
       {{track.name}}
-      <audio controls>
-        <source ng-src="{{track.preview_url}}" type="audio/mpeg" autoplay>
+      <!--<audio controls autoplay>
+
+        <source ng-src="{{track.preview_url}}" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+      </audio>-->
     </li>
   </ul>
+
+<iframe src="{{playlist}}" frameborder="0" allowtransparency="true"></iframe>
+
 </div>
