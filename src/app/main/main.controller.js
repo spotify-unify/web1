@@ -1,7 +1,7 @@
 'use strict';
 
 class MainCtrl {
-  constructor ($scope) {
+  constructor ($scope, EchonestService) {
     $scope.awesomeThings = [
       {
         'title': 'AngularJS',
@@ -67,9 +67,11 @@ class MainCtrl {
     $scope.awesomeThings.forEach(function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
+
+    $scope.artists = EchonestService.artistsByLocation('stockholm');
   }
 }
 
-MainCtrl.$inject = ['$scope'];
+MainCtrl.$inject = ['$scope', 'EchonestService'];
 
 export default MainCtrl;
