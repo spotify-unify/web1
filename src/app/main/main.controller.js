@@ -15,8 +15,11 @@ class MainCtrl {
     });
 
     $scope.artists = EchonestService.artistsByLocation('stockholm');
+    $scope.playlist = "https://embed.spotify.com/?uri=spotify:trackset:"+0eGsygTp906u18L0Oimnem,1lDWb6b6ieDQ2xT7ewTC3G";
   }
 }
+
+
 
 MainCtrl.$inject = ['$scope', 'Spotify', 'EchonestService'];
 
