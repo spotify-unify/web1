@@ -7,7 +7,7 @@ angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
   .controller('MainCtrl', MainCtrl)
   .controller('NavbarCtrl', NavbarCtrl)
 
-  .config(function ($stateProvider, $urlRouterProvider, SpotifyProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, SpotifyProvider, $sceDelegateProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -18,5 +18,13 @@ angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
       SpotifyProvider.setRedirectUri('http://localhost:3000');
       SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     $urlRouterProvider.otherwise('/');
+
+    $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'https://embed.spotify.com/?uri=**',
+    'https://p.scdn.co/mp3-preview/**'
+  ]);
   })
 ;
