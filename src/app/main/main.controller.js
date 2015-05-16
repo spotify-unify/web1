@@ -15,8 +15,6 @@ class MainCtrl {
   }
 }
 
-
-
 MainCtrl.$inject = ['$scope', 'Spotify', 'EchonestService'];
 
 export default MainCtrl;

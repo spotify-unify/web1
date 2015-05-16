@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('methuselah'));
+  beforeEach(module('Not Internet Explorer'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();
