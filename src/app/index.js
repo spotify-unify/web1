@@ -2,12 +2,15 @@
 
 import MainCtrl from './main/main.controller';
 import NavbarCtrl from '../app/components/navbar/navbar.controller';
+import EchonestService from '../app/echonestService';
 
-angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'spotify'])
+angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'spotify', 'angular-echonest'])
+  .service('EchonestService', EchonestService)
   .controller('MainCtrl', MainCtrl)
   .controller('NavbarCtrl', NavbarCtrl)
 
-  .config(function ($stateProvider, $urlRouterProvider, SpotifyProvider, $sceDelegateProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, SpotifyProvider, $sceDelegateProvider, EchonestProvider) {
+
     $stateProvider
       .state('home', {
         url: '/',
@@ -26,5 +29,7 @@ angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     'https://embed.spotify.com/?uri=**',
     'https://p.scdn.co/mp3-preview/**'
   ]);
-  })
-;
+    EchonestProvider.setApiKey('3SDUZCDIIYZJBHE0A');
+
+  });
+ 
