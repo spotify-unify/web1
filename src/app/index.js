@@ -32,4 +32,3 @@ angular.module('methuselah', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize',
     EchonestProvider.setApiKey('3SDUZCDIIYZJBHE0A');
 
   });
- 
