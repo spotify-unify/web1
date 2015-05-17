@@ -1,4 +1,5 @@
 <div class="container">
+  <h1>Popular songs in {{location}}</h1>
   <table>
     <tr ng-repeat="track in tracks">
       <td><img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/></td>
@@ -12,5 +13,5 @@
       </td>
     </tr>
   </table>
-  <!--<iframe src="{{playlist}}" frameborder="0" allowtransparency="true"></iframe>-->
+  <img src="assets/images/create-playlist-green.png" alt="Create Playlist" ng-click="createPlaylist()">
 </div>
