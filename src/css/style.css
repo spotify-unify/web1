@@ -18,11 +18,12 @@ table{
 #song{
     vertical-align: bottom;
 }
-#welcome{
+.welcome{
     margin:0 auto;
     bottom:0;   
     display:block;
-    width:600px;
+    width:auto;
+    height: auto;
 }
 #search input{
     background-color: rgba(167, 219, 216, 0.0);
@@ -36,7 +37,7 @@ table{
     outline:none;
 }
 #search input:autofill{
-    background-color: rgba(167, 219, 216, 0.0);;
+    background-color: rgba(167, 219, 216, 0.0);
 }
 .welcomeText{
 /*    display:inline;*/

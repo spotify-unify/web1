@@ -1,27 +1,17 @@
 <div class="container">
 
-  <div id="welcome">    
-    <p class="welcomeText">I'm traveling to<p>
-      <form id="search" autocomplete="off"/>
-                <input type="text" data-ng-model="city" name="City" placeholder="____________" id="searchInput" class="welcomeText" >
-      </form>
-     <p class="welcomeText"> Unleash heaven</p>
+  <div class="col-md-1">
   </div>
-
-  <table>
-    <tr ng-repeat="track in tracks">
-      <td><img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/></td>
-      <td id="song">{{track.name}}
-      <br><audio controls>
-
-        <source ng-src="{{track.preview_url}}" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio></td>
-    </tr>
-  </table>
-    
-<iframe src="{{playlist}}" frameborder="0" allowtransparency="true"></iframe>
-
-
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-6 welcome">
+     
+      <p class="welcomeText">I'm traveling to<p>
+      <form id="search" autocomplete="off"/>
+          <input type="text" data-ng-model="city" name="City" placeholder="____________" id="searchInput" class="welcomeText" >
+      </form>
+      <p class="welcomeText"> Unleash heaven</p>
+      <a type="button" class="btn btn-primary btn-lg" href="/#/playlist/{{city}}">Search då!</a>
+  </div>
 
 </div>
