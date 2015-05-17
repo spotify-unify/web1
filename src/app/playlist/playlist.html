@@ -4,6 +4,7 @@
       <td><img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/></td>
       <td id="song">
         {{track.name}}<br>
+        <b>{{track.artists[0].name}}</b><br>
         <audio controls>
           <source ng-src="{{track.preview_url}}" type="audio/mpeg">
           Your browser does not support the audio element.
