@@ -91,7 +91,9 @@ color:#0C60FB;
 	border:none;
 }
 .playlistButtonContainer{
-		margin:0 auto;
+	margin:0 auto;
+	width:500px;
+	text-align:center;
 }
 .playlistContainer{
 	margin: 0 auto;	
@@ -102,6 +104,7 @@ color:#0C60FB;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   color: #fff;
+<<<<<<< HEAD
   width:300px;
     font-size:200%;
 }
@@ -114,10 +117,14 @@ color:#0C60FB;
   color: #fff;
   width:300px;
     font-size:200%;
+=======
+  width:400px;
+  height:80px;
+  font-size:200%;
+>>>>>>> origin/master
 }
 
-.btn:hover, a .btn:hover {
-  
+.btn:hover, a .btn:hover {  
   background: #4CB668;
   border: solid #2FA04D 5px;
   text-decoration: none;
