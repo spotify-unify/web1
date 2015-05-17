@@ -7,7 +7,8 @@ class PlaylistCtrl {
     this.location = $stateParams.location;
     this.location = this.location.charAt(0).toUpperCase() + this.location.slice(1);
     $scope.location = this.location;
-    $scope.scope = $stateParams.scope;
+    console.log($stateParams.type);
+    $scope.type = ($stateParams.type == 'popular')? '' : $stateParams.type;
 
     var setSongsInScope = function(songsIds) {
       Spotify.getTracks(songsIds).then(function(data) {

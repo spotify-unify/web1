@@ -20,7 +20,7 @@ angular.module('Not Internet Explorer', ['ngAnimate', 'ngCookies', 'ngTouch', 'n
         controller: 'MainCtrl'
       })
       .state('playlist', {
-        url: '/playlist/:location/:scope',
+        url: '/playlist/:location/:type',
         templateUrl: 'app/playlist/playlist.html',
         controller: 'PlaylistCtrl'
       });
