@@ -1,4 +1,12 @@
 <div class="container">
+<div id="welcome">    
+    <p class="welcomeText">I'm traveling to<p>
+      <form id="search" autocomplete="off"/>
+                <input type="text" data-ng-model="city" name="City" placeholder="____________" id="searchInput" class="welcomeText" >
+      </form>
+     <p class="welcomeText"> Unleash heaven</p>
+</div>
+
   <ul>
     <li ng-repeat="track in tracks">
       <img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/>
@@ -9,15 +17,7 @@
         Your browser does not support the audio element.
       </audio>
     </li>
-  </ul>
-<div id="welcome">    
-    <p class="welcomeText">I'm traveling to<p>
-      <form id="search" autocomplete="off"/>
-                <input type="text" data-ng-model="city" name="City" placeholder="____________" id="searchInput" class="welcomeText" >
-      </form>
-     <p class="welcomeText"> Unleash heaven</p>
-    </div>
-    
+  </ul>    
 <iframe src="{{playlist}}" frameborder="0" allowtransparency="true"></iframe>
 
 
