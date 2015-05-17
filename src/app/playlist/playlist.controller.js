@@ -9,9 +9,7 @@ class PlaylistCtrl {
     $scope.location = this.location;
 
     EchonestService.getPlaylistSongs($stateParams.location).then(function (songsIds) {
-      var url = "https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:";
-      $scope.playlist = url + songsIds.join(',');
-      Spotify.getTracks(songsIds.join(',')).then(function (data) {
+      Spotify.getTracks(songsIds).then(function (data) {
         $scope.tracks = data.tracks;
         for (var i = 0; i < $scope.tracks.length; i++) {
           $scope.tracks[i].embeddlink = 'https://embed.spotify.com/?uri=' + $scope.tracks[i].uri;
@@ -20,7 +18,19 @@ class PlaylistCtrl {
     });
 
     $scope.createPlaylist = function() { 
-      Spotify.login(); 
+      Spotify.login().then(function(data) {
+        Spotify.getCurrentUser().then(function(user) {
+          var options = {name: 'Unify - ' + $scope.location }
+          Spotify.createPlaylist(user.id, options).then(function(p) {
+            var tracks = $scope.tracks.map(function(track) {
+              return track.uri;
+            });
+            Spotify.addPlaylistTracks(user.id, p.id, tracks).then(function(data) {
+              alert("Success!");
+            }); 
+          });
+        });
+      });
     };
   }
 }
