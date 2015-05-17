@@ -4,6 +4,7 @@ html{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-y:scroll;
 }
 body{
     background-color:transparent;
@@ -26,7 +27,7 @@ padding-top:100px;
     text-align: center;
 }
 #searchInput{
-    width:300px; 
+    width:600px; 
     background: transparent;
     border: none;
     border-bottom: 1px solid #FFF;
