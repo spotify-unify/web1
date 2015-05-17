@@ -3,7 +3,7 @@
 class PlaylistCtrl {
 
   constructor ($scope, $stateParams, Spotify, EchonestService) {
-    
+    this.Spotify = Spotify;
     this.location = $stateParams.location;
     this.location = this.location.charAt(0).toUpperCase() + this.location.slice(1);
     $scope.location = this.location;
@@ -18,10 +18,10 @@ class PlaylistCtrl {
         }
       });
     });
-  }
 
-  createPlaylist() {
-    
+    $scope.createPlaylist = function() { 
+      Spotify.login(); 
+    };
   }
 }
 
