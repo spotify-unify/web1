@@ -14,8 +14,7 @@ body{
 table{
     margin: 0 auto;
     color: #fff;
-    width:50%;
-
+    max-width:300px;
 }
 tr{
     background-color: #000;
@@ -23,6 +22,10 @@ tr{
 h1{
     text-align: center;
     color: #fff;
+}
+h4{
+	margin-left: 15px;
+	margin-top:20px;
 }
 p{
 	margin-left: 15px;
