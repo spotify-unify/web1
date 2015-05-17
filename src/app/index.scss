@@ -12,6 +12,7 @@ body{
 table{
     margin: 0 auto;
     color: #fff;
+    width:50%;
 
 }
 tr{
@@ -20,6 +21,9 @@ tr{
 h1{
     text-align: center;
     color: #fff;
+}
+p{
+	margin-left: 15px;
 }
 #song{
     vertical-align: bottom;
@@ -60,10 +64,10 @@ padding-top:100px;
 
 .right-addon input { padding-right: 30px; }
 .right-addon .glyphicon { right: 0px;}
-
+/*
 .pointer {
   cursor: pointer;
-}
+}*/
 .toggleButton{
 	width:200px;
 }
@@ -72,6 +76,24 @@ padding-top:100px;
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow:ellipsis; 
+}
+.bold{
+	font-weight:bold;
+}
+.playlistButton{
+	background: url("../assets/images/create-playlist-green.png") no-repeat scroll 0 0 transparent;
+	background-size: 100%;
+	min-height:50px;
+	min-width:300px;
+	outline:none;
+	box-shadow:none;
+	border:none;
+}
+.playlistButtonContainer{
+		margin:0 auto;
+}
+.playlistContainer{
+	margin: 0 auto;	
 }
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */

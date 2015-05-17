@@ -1,11 +1,14 @@
-<div class="container">
+<div class="playlistContainer">
   <h1>Popular songs in {{location}}</h1>
+  <div class="playlistButtonContainer">
+    <button action="createPlaylist()" class="playlistButton"/>
+  </div> 
   <table>
     <tr ng-repeat="track in tracks">
       <td><img ng-src="{{track.album.images[0].url}}" height="100px" width="100px"/></td>
       <td id="song">
-        {{track.name}}<br>
-        <b>{{track.artists[0].name}}</b><br>
+        <p class="ellipsis bold">{{track.name}}</p>
+        <p class="ellipsis bold">{{track.artists[0].name}}</p>
         <audio controls>
           <source ng-src="{{track.preview_url}}" type="audio/mpeg">
           Your browser does not support the audio element.
@@ -13,6 +16,4 @@
       </td>
     </tr>
   </table>
-  <img src="assets/images/create-playlist-green.png" alt="Create Playlist"
-       ng-click="createPlaylist()" class="pointer">
 </div>
