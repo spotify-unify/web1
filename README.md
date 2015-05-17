@@ -1,4 +1,4 @@
-# Web template
+# Triptunes
 
 This is a template for a Node-based web application, using bower and
 gulp.  It is based off of
