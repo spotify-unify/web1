@@ -17,7 +17,7 @@ table{
     width:300px;
 }
 tr{
-    background-color: #000;
+    background-color: rgba(22, 21, 20, 1);
 }
 h1{
     text-align: center;
@@ -92,6 +92,7 @@ padding-top:100px;
 	outline:none;
 	box-shadow:none;
 	border:none;
+  margin: 25px;
 }
 .playlistButtonContainer{
 	margin:0 auto;
@@ -125,6 +126,10 @@ padding-top:100px;
   background: #4CB668;
   border: solid #2FA04D 5px;
   text-decoration: none;
+}
+
+p#love {
+  color: #fff;
 }
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */

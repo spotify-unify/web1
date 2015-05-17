@@ -3,14 +3,14 @@
 class MainCtrl {
 
   constructor ($scope) {
-    $scope.scope = 'popular';
+    $scope.type = 'popular';
 
     $scope.setPopular = function() {
-      $scope.scope = 'popular';
+      $scope.type = 'popular';
     };
 
     $scope.setLocal = function() {
-      $scope.scope = 'local';
+      $scope.type = 'local';
     };
   }
 }
