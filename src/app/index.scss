@@ -26,10 +26,10 @@ padding-top:100px;
     text-align: center;
 }
 #searchInput{
-    background-color: transparent;
     width:300px; 
+    background: transparent;
     border: none;
-    outline:none;
+    border-bottom: 1px solid #FFF;
 }
 #search input:focus{
     outline:none;
