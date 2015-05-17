@@ -3,11 +3,13 @@
 import MainCtrl from './main/main.controller';
 import PlaylistCtrl from './playlist/playlist.controller';
 import EchonestService from '../app/echonestService';
+import ExclusivePlayDirective from './playlist/exclusive-play.directive';
 
 angular.module('Not Internet Explorer', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'mgcrea.ngStrap', 'spotify', 'angular-echonest'])
   .service('EchonestService', EchonestService)
   .controller('MainCtrl', MainCtrl)
   .controller('PlaylistCtrl', PlaylistCtrl)
+  .directive('exPlay', ExclusivePlayDirective)
 
   .config(function ($stateProvider, $urlRouterProvider, SpotifyProvider, $sceDelegateProvider, EchonestProvider) {
 
