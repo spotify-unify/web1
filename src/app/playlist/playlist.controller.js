@@ -3,6 +3,10 @@
 class PlaylistCtrl {
 
   constructor ($scope, $stateParams, Spotify, EchonestService) {
+    
+    this.location = $stateParams.location;
+    this.location = this.location.charAt(0).toUpperCase() + this.location.slice(1);
+    $scope.location = this.location;
 
     EchonestService.getPlaylistSongs($stateParams.location).then(function (songsIds) {
       var url = "https://embed.spotify.com/?uri=spotify:trackset:PREFEREDTITLE:";
@@ -14,6 +18,10 @@ class PlaylistCtrl {
         }
       });
     });
+  }
+
+  createPlaylist() {
+    
   }
 }
 
