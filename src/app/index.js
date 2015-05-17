@@ -26,15 +26,14 @@ angular.module('Not Internet Explorer', ['ngAnimate', 'ngCookies', 'ngTouch', 'n
       SpotifyProvider.setClientId('4fedaf1bba0d4fe494010266b009be29');
       SpotifyProvider.setRedirectUri('http://localhost:3000/assets/callback.html');
       SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
-    $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/');
 
-    $sceDelegateProvider.resourceUrlWhitelist([
-    // Allow same origin resource loads.
-    'self',
-    // Allow loading from our assets domain.  Notice the difference between * and **.
-    'https://embed.spotify.com/?uri=**',
-    'https://p.scdn.co/mp3-preview/**'
-  ]);
-    EchonestProvider.setApiKey('3SDUZCDIIYZJBHE0A');
-
+      $sceDelegateProvider.resourceUrlWhitelist([
+        // Allow same origin resource loads.
+        'self',
+        // Allow loading from our assets domain.  Notice the difference between * and **.
+        'https://embed.spotify.com/?uri=**',
+        'https://p.scdn.co/mp3-preview/**'
+      ]);
+      EchonestProvider.setApiKey('3SDUZCDIIYZJBHE0A');
   });
