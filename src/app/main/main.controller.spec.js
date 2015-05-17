@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('Not Internet Explorer'));
+  beforeEach(module('TripTunes'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();
