@@ -16,14 +16,14 @@
 
       <div class="switch-toggle well toggleButton">  
         <input id="popular" name="view" type="radio" checked>
-        <label for="popular" onclick="">Popular</label>
+        <label for="popular" ng-click="setPopular()">Popular</label>
         <input id="local" name="view" type="radio">
-        <label for="local" onclick="">Local</label>
+        <label for="local" ng-click="setLocal()">Local</label>
         <a class="btn btn-white btn-primary btn-lg"></a>
       </div>
     </div>  
     <div class="" style="clear:both;">
-      <a type="button" class="btn btn-primary btn-lg" href="/#/playlist/{{city}}" style="margin-top:20%;">Go!</a>
+      <a type="button" class="btn btn-primary btn-lg" href="/#/playlist/{{city}}/{{scope}}" style="margin-top:20%;">Go!</a>
     </div>
   </div>
 </div>

@@ -7,16 +7,23 @@ class PlaylistCtrl {
     this.location = $stateParams.location;
     this.location = this.location.charAt(0).toUpperCase() + this.location.slice(1);
     $scope.location = this.location;
+    $scope.scope = $stateParams.scope;
 
-    EchonestService.getPlaylistSongs($stateParams.location).then(function (songsIds) {
-      Spotify.getTracks(songsIds).then(function (data) {
+    var setSongsInScope = function(songsIds) {
+      Spotify.getTracks(songsIds).then(function(data) {
         $scope.tracks = data.tracks;
         for (var i = 0; i < $scope.tracks.length; i++) {
           $scope.tracks[i].embeddlink = 'https://embed.spotify.com/?uri=' + $scope.tracks[i].uri;
         }
       });
-    });
-
+    };
+    
+    if ($stateParams.scope == 'local') {
+      EchonestService.getPlaylistLocalSongs($stateParams.location).then(setSongsInScope);
+    } else {
+      EchonestService.getPlaylistPopularSongs($stateParams.location).then(setSongsInScope);
+    }
+    
     $scope.createPlaylist = function() { 
       Spotify.login().then(function(data) {
         Spotify.getCurrentUser().then(function(user) {
