@@ -12,6 +12,12 @@ body{
     min-height:100%;
     width:100%;
 }
+table{
+    margin: 0 auto;
+}
+#song{
+    vertical-align: bottom;
+}
 #welcome{
     margin:0 auto;
     bottom:0;   
