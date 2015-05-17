@@ -25,20 +25,20 @@ table{
     width:auto;
     height: auto;
 }
-#search input{
-    background-color: rgba(167, 219, 216, 0.0);
+#searchInput{
+    background-color: transparent;
     width:300px; 
     border: none;
+    outline:none;
 }
 #search input:active{
-    background-color: rgba(167, 219, 216, 0.0);
 }
 #search input:focus{
     outline:none;
 }
-#search input:autofill{
+/*#search input:autofill{
     background-color: rgba(167, 219, 216, 0.0);
-}
+}*/
 .welcomeText{
 /*    display:inline;*/
     color: #FA6900;
