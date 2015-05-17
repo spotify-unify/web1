@@ -1,7 +1,7 @@
 <div class="playlistContainer">
   <h1>Popular songs in {{location}}</h1>
   <div class="playlistButtonContainer">
-    <button action="createPlaylist()" class="playlistButton"/>
+    <button ng-click="createPlaylist()" class="playlistButton"/>
   </div> 
   <table>
     <tr ng-repeat="track in tracks">
