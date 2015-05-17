@@ -26,7 +26,7 @@ class PlaylistCtrl {
               return track.uri;
             });
             Spotify.addPlaylistTracks(user.id, p.id, tracks).then(function(data) {
-              alert("Success!");
+              window.location = 'http://open.spotify.com/user/' + user.id  + '/playlist/' + p.id;
             }); 
           });
         });
