@@ -23,8 +23,8 @@ angular.module('Not Internet Explorer', ['ngAnimate', 'ngCookies', 'ngTouch', 'n
         controller: 'PlaylistCtrl'
       });
       
-      SpotifyProvider.setClientId('d74a81e92d4c401cac467f4818a31b82');
-      SpotifyProvider.setRedirectUri('http://localhost:3000');
+      SpotifyProvider.setClientId('4fedaf1bba0d4fe494010266b009be29');
+      SpotifyProvider.setRedirectUri('http://localhost:3000/assets/callback.html');
       SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
     $urlRouterProvider.otherwise('/');
 
