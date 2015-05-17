@@ -87,7 +87,9 @@ color:#5163A6;
 	border:none;
 }
 .playlistButtonContainer{
-		margin:0 auto;
+	margin:0 auto;
+	width:500px;
+	text-align:center;
 }
 .playlistContainer{
 	margin: 0 auto;	
@@ -99,12 +101,11 @@ color:#5163A6;
   text-decoration: none;
   color: #fff;
   width:400px;
-    height:80px;
-    font-size:200%;
+  height:80px;
+  font-size:200%;
 }
 
-.btn:hover, a .btn:hover {
-  
+.btn:hover, a .btn:hover {  
   background: #4CB668;
   border: solid #2FA04D 5px;
   width:395px;
