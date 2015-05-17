@@ -14,6 +14,7 @@ body{
 table{
     margin: 0 auto;
     color: #fff;
+    width:50%;
 
 }
 tr{
@@ -22,6 +23,9 @@ tr{
 h1{
     text-align: center;
     color: #fff;
+}
+p{
+	margin-left: 15px;
 }
 #song{
     vertical-align: bottom;
@@ -32,7 +36,7 @@ padding-top:100px;
 }
 #searchInput{
 font-family: 'Kalam', cursive;
-color:#5163A6;
+color:#0C60FB;
     width:80%; 
     background: transparent;
     border: none;
@@ -52,16 +56,17 @@ color:#5163A6;
     font-weight: 700;
 }
 
-
-.pointer {
+.right-addon input { padding-right: 30px; }
+.right-addon .glyphicon { right: 0px;}
+/*.pointer {
   cursor: pointer;
-}
+}*/
 .toggleButton{
 	width:300px;
     height:80px;
     color:#fff;
     font-size:200%;
-    background-color: #ddd;
+    background-color:rgba(0,0,0,0.4);
 }
 .ellipsis{
     white-space: nowrap;
@@ -69,7 +74,26 @@ color:#5163A6;
     text-overflow: ellipsis;
     -o-text-overflow:ellipsis; 
 }
-
+.bold{
+	font-weight:bold;
+}
+.playlistButton{
+	background: url("../assets/images/create_playlist-white_bigger.svg") no-repeat scroll 0 0 transparent;
+	background-size: 100%;
+	min-height:50px;
+	min-width:300px;
+	outline:none;
+	box-shadow:none;
+	border:none;
+}
+.playlistButtonContainer{
+	margin:0 auto;
+	width:500px;
+	text-align:center;
+}
+.playlistContainer{
+	margin: 0 auto;	
+}
 .btn {
   background: #4CB668;
   border: solid #2FA04D 5px;
@@ -77,16 +101,15 @@ color:#5163A6;
   text-decoration: none;
   color: #fff;
   width:400px;
-    height:80px;
-    font-size:200%;
+  height:80px;
+  font-size:200%;
 }
 
-.btn:hover, a .btn:hover {
-  
+.btn:hover, a .btn:hover {  
   background: #4CB668;
   border: solid #2FA04D 5px;
-    width:395px;
-    height:78px;
+  width:395px;
+  height:78px;
   text-decoration: none;
 }
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
