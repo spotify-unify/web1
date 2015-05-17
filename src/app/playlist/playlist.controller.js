@@ -19,7 +19,7 @@ class PlaylistCtrl {
       });
     };
     
-    if ($stateParams.scope == 'local') {
+    if ($stateParams.type == 'local') {
       EchonestService.getPlaylistLocalSongs($stateParams.location).then(setSongsInScope);
     } else {
       EchonestService.getPlaylistPopularSongs($stateParams.location).then(setSongsInScope);
