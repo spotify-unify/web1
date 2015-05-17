@@ -9,7 +9,6 @@ html{
 body{
     background-color:transparent;
 }
-
 table{
     margin: 0 auto;
     color: #fff;
@@ -40,12 +39,12 @@ padding-top:100px;
 }*/
 
 .welcomeText{
+	display:inline;
     color: #fff;
     font-family: sans-serif;
     font-size: 400%;
     font-weight: 600;
 }
-
 .inner-addon .glyphicon {
   position: absolute;
   padding: 10px;
@@ -61,6 +60,9 @@ padding-top:100px;
 
 .pointer {
   cursor: pointer;
+}
+.toggleButton{
+	width:200px;
 }
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject

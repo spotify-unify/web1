@@ -5,9 +5,17 @@
  
           <input type="text" data-ng-model="city" name="City" id="searchInput" class="welcomeText" style="display:inline; text-align:center;"/>
       </form>
-      <p class="welcomeText" style="display:inline;"> and want to listen to songs that are most popular or from local artists.</p>
-      <br/>
+      <p class="welcomeText" style="display:inline;"> and want to listen to songs that are </p>
+        <div class="switch-toggle well toggleButton">  
+          <input id="popular" name="view" type="radio" checked>
+          <label for="popular" onclick="">Popular</label>
+          <input id="local" name="view" type="radio">
+          <label for="local" onclick="">Local</label>
+          <a class="btn btn-primary"></a>
+        </div>
       <a type="button" class="btn btn-primary btn-lg" href="/#/playlist/{{city}}">Search då!</a>
 </div>
+
+
 
 
