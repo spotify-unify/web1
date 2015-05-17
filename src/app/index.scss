@@ -1,8 +1,4 @@
 html{
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
     background: url(../img/bcground.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,31 +6,29 @@ html{
     background-size: cover;
 }
 body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    min-height:100%;
-    width:100%;
     background-color:transparent;
 }
 table{
     margin: 0 auto;
+    color: #fff;
+
+}
+h1{
+    text-align: center;
+    color: #fff;
 }
 #song{
     vertical-align: bottom;
 }
 .welcome{
-    margin:0 auto;
-    bottom:0;   
-    width:auto;
-    height: auto;
+padding-top:100px;
     text-align: center;
 }
 #searchInput{
-    background-color: transparent;
     width:300px; 
+    background: transparent;
     border: none;
-    outline:none;
+    border-bottom: 1px solid #FFF;
 }
 #search input:focus{
     outline:none;
@@ -42,13 +36,34 @@ table{
 /*#search input:autofill{
     background-color: rgba(167, 219, 216, 0.0);
 }*/
+
 .welcomeText{
 	display:inline;
     color: #fff;
     font-family: sans-serif;
-    font-size: 200%;
+    font-size: 300%;
     font-weight: 600;
 }
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.right-addon input { padding-right: 30px; }
+.right-addon .glyphicon { right: 0px;}
+
+.pointer {
+  cursor: pointer;
+}
+.toggleButton{
+	width:200px;
+}
+
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
