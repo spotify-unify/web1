@@ -1,8 +1,4 @@
 html{
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
     background: url(../img/bcground.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -10,17 +6,8 @@ html{
     background-size: cover;
 }
 body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    min-height:100%;
-    width:100%;
     background-color:transparent;
 }
-
-
-
-
 
 table{
     margin: 0 auto;
@@ -29,10 +16,7 @@ table{
     vertical-align: bottom;
 }
 .welcome{
-    margin:0 auto;
-    bottom:0;   
-    width:auto;
-    height: auto;
+padding-top:100px;
     text-align: center;
 }
 #searchInput{
@@ -47,6 +31,7 @@ table{
 /*#search input:autofill{
     background-color: rgba(167, 219, 216, 0.0);
 }*/
+
 .welcomeText{
     color: #fff;
     font-family: sans-serif;
